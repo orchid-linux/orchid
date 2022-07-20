@@ -104,7 +104,7 @@ STR_BTRFS_ERASE="${COLOR_GREEN}*${COLOR_RESET} Formatați partiția Btrfs."
 STR_EXT4_ERASE="${COLOR_GREEN}*${COLOR_RESET} Formatați partiția EXT4n."
 # Function swap_size_hibernation
 
-STR_HIBERNATION_DANGER="Nu vă recomandăm să folosiți hibernarea cu dvs ${RAM_SIZE_GB} GB de RAM, deoarece ar necesita o partiție SWAP a ${SWAP_SIZE_GB} GB pe disc"
+STR_HIBERNATION_DANGER="Nu vă recomandăm să folosiți hibernarea cu dvs ${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET} GB de RAM, deoarece ar necesita o partiție SWAP a ${SWAP_SIZE_GB} GB pe disc"
 
 STR_HIBERNATION_CONFIRM="Doriți să creați o partiție SWAP de ${SWAP_SIZE_GB} (Dacă nu, partiția SWAP va fi mult mai mică și nu veți putea folosi hibernarea) ${COLOR_WHITE}[o/${COLOR_GREEN}n${COLOR_WHITE}]${COLOR_RESET} "
 
@@ -215,8 +215,8 @@ STR_RESUME_EDITION="Versiunea Orchid Linux aleasă:"
 STR_RESUME_KEYBOARD="Comutați tastatura la ${COLOR_GREEN}(ro)${COLOR_RESET}: [${COLOR_GREEN}OK${COLOR_RESET}]"
 STR_RESUME_DISK="Orchid Linux se va instala pe:"
 STR_RESUME_FS="Sistemul de fișiere ales este:"
-STR_RESUME_HIBERNATION="Veți putea folosi ${COLOR_GREEN}hibernare${COLOR_RESET}: memorie de ${RAM_SIZE_GB} GB, ${PROCESSORS}coruri CPU, SWAP de ${COLOR_GREEN} ${SWAP_SIZE_GB} GB${COLOR_RESET}"
-STR_RESUME_HIBERNATIONNOT="Memoria ta are o dimensiune de ${RAM_SIZE_GB} GB, ${PROCESSORS}coruri CPU, SWAP de ${COLOR_GREEN}${SWAP_SIZE_GB} GB${COLOR_RESET}"
+STR_RESUME_HIBERNATION="Veți putea folosi ${COLOR_GREEN}hibernare${COLOR_RESET}: memorie de ${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET} GB, ${COLOR_GREEN} ${PROCESSORS} ${COLOR_RESET}coruri CPU, SWAP de ${COLOR_GREEN} ${SWAP_SIZE_GB} GB${COLOR_RESET}"
+STR_RESUME_HIBERNATIONNOT="Memoria ta are o dimensiune de ${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET} GB, ${COLOR_GREEN} ${PROCESSORS} ${COLOR_RESET}coruri CPU, SWAP de ${COLOR_GREEN}${SWAP_SIZE_GB} GB${COLOR_RESET}"
 
 STR_RESUME_GPU="Vor fi instalate următoarele drivere grafice:"
 STR_RESUME_HOSTNAME="În rețea, acest sistem va fi numit:"

@@ -101,7 +101,7 @@ STR_BTRFS_ERASE="${COLOR_GREEN}*${COLOR_RESET} Format Btrfs partition."
 STR_EXT4_ERASE="${COLOR_GREEN}*${COLOR_RESET} Format EXT4 partition."
 # Function swap_size_hibernation
 
-STR_HIBERNATION_DANGER="We do not recommend using hibernation with your ${RAM_SIZE_GB}GB of RAM, as it would require a SWAP partition of ${SWAP_SIZE_GB}GB on the disk"
+STR_HIBERNATION_DANGER="We do not recommend using hibernation with your ${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET}GB of RAM, as it would require a SWAP partition of ${SWAP_SIZE_GB}GB on the disk"
 
 STR_HIBERNATION_CONFIRM="Do you want to create a SWAP partition of ${SWAP_SIZE_GB}(If not, the SWAP partition will be much smaller and you will not be able to use hibernation) ${COLOR_WHITE}[y/${COLOR_GREEN}n${COLOR_WHITE}]${COLOR_RESET} "
 
@@ -212,8 +212,8 @@ STR_RESUME_EDITION="Orchid Linux version chosen:"
 STR_RESUME_KEYBOARD="Switch keyboard to ${COLOR_GREEN}(en)${COLOR_RESET}: [${COLOR_GREEN}OK${COLOR_RESET}]"
 STR_RESUME_DISK="Orchid Linux will install on:"
 STR_RESUME_FS="The chosen file system is:"
-STR_RESUME_HIBERNATION="You will be able to use the ${COLOR_GREEN}hibernation${COLOR_RESET}: memory of ${RAM_SIZE_GB}GB,${PROCESSORS}CPU cores, SWAP of ${COLOR_GREEN} ${SWAP_SIZE_GB}GB${COLOR_RESET}"
-STR_RESUME_HIBERNATIONNOT="Your memory has a size of ${RAM_SIZE_GB} GB, ${PROCESSORS}CPU cores, SWAP of ${COLOR_GREEN} ${SWAP_SIZE_GB} GB ${COLOR_RESET}"
+STR_RESUME_HIBERNATION="You will be able to use the ${COLOR_GREEN}hibernation${COLOR_RESET}: memory of ${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET}GB,${COLOR_GREEN} ${PROCESSORS} ${COLOR_RESET}CPU cores, SWAP of ${COLOR_GREEN} ${SWAP_SIZE_GB}GB${COLOR_RESET}"
+STR_RESUME_HIBERNATIONNOT="Your memory has a size of ${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET} GB, ${COLOR_GREEN} ${PROCESSORS} ${COLOR_RESET}CPU cores, SWAP of ${COLOR_GREEN} ${SWAP_SIZE_GB} GB ${COLOR_RESET}"
 
 
 STR_RESUME_GPU="The following graphics drivers will be installed:"

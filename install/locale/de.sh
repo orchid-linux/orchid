@@ -102,7 +102,7 @@ STR_BTRFS_ERASE="${COLOR_GREEN}*${COLOR_RESET} Formatierung der BTRFS partition.
 STR_EXT4_ERASE="${COLOR_GREEN}*${COLOR_RESET} Formatierung der EXT4 partition."
 # Function swap_size_hibernation
 
-STR_HIBERNATION_DANGER="Wir empfehlen ihnen dagegen Ruhemodus mit ihren ${RAM_SIZE_GB} GB an RAM, zu verwenden denn es bräuchte eine SWAP partition von ${SWAP_SIZE_GB} GB auf der Festplatte"
+STR_HIBERNATION_DANGER="Wir empfehlen ihnen dagegen Ruhemodus mit ihren ${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET} GB an RAM, zu verwenden denn es bräuchte eine SWAP partition von ${SWAP_SIZE_GB} GB auf der Festplatte"
 
 STR_HIBERNATION_CONFIRM="Wollen sie eine SWAP partition mit der folgenden größe erstellen?${SWAP_SIZE_GB} (falls nicht, wird die SWAP partition viel kleiner und sie werden keinen Ruhemodus verwenden können) ${COLOR_WHITE}[o/${COLOR_GREEN}n${COLOR_WHITE}]${COLOR_RESET} "
 
@@ -215,8 +215,8 @@ STR_RESUME_EDITION="gewählte Orchid Linux version:"
 STR_RESUME_KEYBOARD="tastatur wechsel zu ${COLOR_GREEN}(en)${COLOR_RESET}: [${COLOR_GREEN}OK${COLOR_RESET}]"
 STR_RESUME_DISK="Orchid Linux wird  installiert auf:"
 STR_RESUME_FS="Das gewählte Dateisystem ist:"
-STR_RESUME_HIBERNATION="Sie werden zur nutzung folgender ressourcen in der lage sein: ${COLOR_GREEN}hibernation${COLOR_RESET}: arbeitsspeicher von ${RAM_SIZE_GB} GB, ${PROCESSORS}CPU kerne von, SWAP von ${COLOR_GREEN}${SWAP_SIZE_GB}GB ${COLOR_RESET}"
-STR_RESUME_HIBERNATIONNOT="ihr arbeitsspeicher hat eine größe von ${RAM_SIZE_GB} GB, ${PROCESSORS} CPU kerne, SWAP von ${COLOR_GREEN} ${SWAP_SIZE_GB} GB${COLOR_RESET}."
+STR_RESUME_HIBERNATION="Sie werden zur nutzung folgender ressourcen in der lage sein: ${COLOR_GREEN}hibernation${COLOR_RESET}: arbeitsspeicher von ${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET} GB, ${COLOR_GREEN} ${PROCESSORS} ${COLOR_RESET}CPU kerne von, SWAP von ${COLOR_GREEN}${SWAP_SIZE_GB}GB ${COLOR_RESET}"
+STR_RESUME_HIBERNATIONNOT="ihr arbeitsspeicher hat eine größe von ${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET} GB, ${COLOR_GREEN} ${PROCESSORS} ${COLOR_RESET} CPU kerne, SWAP von ${COLOR_GREEN} ${SWAP_SIZE_GB} GB${COLOR_RESET}."
 
 STR_RESUME_GPU="Die folgenden grafiktreiber werden installiert:"
 STR_RESUME_HOSTNAME="Auf diesem netzwerk wird das system so bennant:"

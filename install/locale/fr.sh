@@ -100,7 +100,7 @@ STR_EXT4_ERASE="${COLOR_GREEN}*${COLOR_RESET} Formatage de la partition EXT4."
 
 # Function swap_size_hibernation
 
-STR_HIBERNATION_DANGER="Nous ne recommandons pas l'utilisation de l'hibernation avec votre ${RAM_SIZE_GB} Go de RAM, car cela nécessiterait une partition SWAP de ${SWAP_SIZE_GB} Go sur le disque".
+STR_HIBERNATION_DANGER="Nous ne recommandons pas l'utilisation de l'hibernation avec votre ${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET} Go de RAM, car cela nécessiterait une partition SWAP de ${SWAP_SIZE_GB} Go sur le disque".
 
 STR_HIBERNATION_CONFIRM="Voulez-vous créer une partition SWAP de ${SWAP_SIZE_GB} (Sinon, la partition SWAP sera beaucoup plus petite et vous ne pourrez pas utiliser l'hibernation) ${COLOR_WHITE}[o/${COLOR_GREEN}n${COLOR_WHITE}]${COLOR_RESET} "
 
@@ -209,8 +209,8 @@ STR_RESUME_EDITION="Version d'Orchid Linux choisie :"
 STR_RESUME_KEYBOARD="Passage du clavier en ${COLOR_GREEN}(fr)${COLOR_RESET} : [${COLOR_GREEN}OK${COLOR_RESET}]"
 STR_RESUME_DISK="Orchid Linux s'installera sur :"
 STR_RESUME_FS="Le système de fichiers choisi est :"
-STR_RESUME_HIBERNATION="Vous pourrez utiliser l'${COLOR_GREEN}hibernation${COLOR_RESET} : mémoire de ${RAM_SIZE_GB} GB, ${PROCESSORS} coeurs de processeur, SWAP de ${COLOR_GREEN} ${SWAP_SIZE_GB} GB${COLOR_RESET}."
-STR_RESUME_HIBERNATIONNOT="Votre mémoire a une taille de ${RAM_SIZE_GB} GB, ${PROCESSORS} coeurs de processeur, SWAP de ${COLOR_GREEN} ${SWAP_SIZE_GB} GB${COLOR_RESET}."
+STR_RESUME_HIBERNATION="Vous pourrez utiliser l'${COLOR_GREEN}hibernation${COLOR_RESET} : mémoire de ${COLOR_GREEN}${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET} GB ${COLOR_RESET}, ${COLOR_GREEN}${COLOR_GREEN} ${PROCESSORS} ${COLOR_RESET}${COLOR_RESET} coeurs de processeur, SWAP de ${COLOR_GREEN} ${SWAP_SIZE_GB} GB${COLOR_RESET}."
+STR_RESUME_HIBERNATIONNOT="Votre mémoire a une taille de ${COLOR_GREEN} ${RAM_SIZE_GB} ${COLOR_RESET} GB, ${COLOR_GREEN} ${PROCESSORS} ${COLOR_RESET} coeurs de processeur, SWAP de ${COLOR_GREEN} ${SWAP_SIZE_GB} GB${COLOR_RESET}."
 
 STR_RESUME_GPU="Les pilotes graphiques suivants vont être installés :"
 STR_RESUME_HOSTNAME="Sur le réseau, ce système aura pour nom :"
