@@ -4,7 +4,7 @@
 
 Orchid is a modern and well designed distro of Gentoo for PC and Laptop users.
 
-[Version Française](https://github.com/wamuu-sudo/orchid/blob/main/README.md)
+[Version Française](https://github.com/orchid-linux/orchid/blob/main/README.md)
 
 Current version of the project : Pre-release 1.3.4
 
@@ -30,7 +30,7 @@ We also offer the installation of the [TkG](https://github.com/Frogging-Family/l
 
 An installation guide is availible [here](https://github.com/juliiine/orchid/blob/main/INSTALLATION-EN.md).
 
-A documentation page about our tools is availible [here](https://github.com/wamuu-sudo/orchid/blob/main/TOOLS-EN.md).
+A documentation page about our tools is availible [here](https://github.com/orchid-linux/orchid/blob/main/TOOLS-EN.md).
 
 What makes Orchid different from other distros:
 

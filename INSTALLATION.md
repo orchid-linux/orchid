@@ -39,7 +39,7 @@ Espace disque : 20Go
 Il faut télécharger le script :
 
 ```
-wget https://raw.githubusercontent.com/wamuu-sudo/orchid/main/install/install.sh
+wget https://raw.githubusercontent.com/orchid-linux/orchid/main/install/install.sh
 ```
 
 et appliquer les bons droits :
@@ -390,7 +390,7 @@ Raccourci utiles sous DWM :
 
 ## Aller plus loin :
 
-Découvrez nos outils permettant une utilisation simple et rapide d'Orchid : [Nos outils](https://github.com/wamuu-sudo/orchid/blob/main/TOOLS.md)
+Découvrez nos outils permettant une utilisation simple et rapide d'Orchid : [Nos outils](https://github.com/orchid-linux/orchid/blob/main/TOOLS.md)
 
 Vous pouvez rejoindre notre serveur Discord : [Rejoindre le serveur](https://discord.gg/DeRhvP7M)
 

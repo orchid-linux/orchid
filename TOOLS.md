@@ -129,7 +129,7 @@ Transforme une Gentoo en Orchid avec la suite d'outils Orchid, ainsi que les wal
 Lancer la commande et l'opération se fait automatiquement :
 
 ```
-wget https://raw.githubusercontent.com/wamuu-sudo/orchid-bins/main/bins/orchid-transform && chmod +x ./orchid-transform && sudo ./orchid-transform
+wget https://raw.githubusercontent.com/orchid-linux/orchid-bins/main/bins/orchid-transform && chmod +x ./orchid-transform && sudo ./orchid-transform
 ```
 
 ## Contributeurs

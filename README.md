@@ -3,9 +3,9 @@
 ![Orchid Logo](img/Orchid-Think_3.3_-_N.png)
 Orchid est un installateur rapide de Gentoo, pour les ordinateurs de bureau et ordinateurs portables.
 
-[English Version](https://github.com/wamuu-sudo/orchid/blob/main/readme/README-EN.md)
+[English Version](https://github.com/orchid-linux/orchid/blob/main/readme/README-EN.md)
 
-Notes de versions : [1.4.0](https://github.com/wamuu-sudo/orchid/blob/main/docs/changelog-1.4.0.md)
+Notes de versions : [1.4.0](https://github.com/orchid-linux/orchid/blob/main/docs/changelog-1.4.0.md)
 
 Il est fortement recommandé de rejoindre le Discord afin d'être tenu informé des mises à jour, et d'une documentation plus poussée qu'ici : [Orchid Linux](https://discord.gg/Wegk7a6TQ8)
 
@@ -27,11 +27,11 @@ Les éditions gaming embarquent directement l'ensemble des librairies 32bits, le
 
 Nous proposons aussi l'installation du noyau [TkG](https://github.com/Frogging-Family/linux-tkg) au travers de nos outils.
 
-Le guide d'installation est déjà disponible [ici](https://github.com/wamuu-sudo/orchid/blob/main/INSTALLATION.md).
+Le guide d'installation est déjà disponible [ici](https://github.com/orchid-linux/orchid/blob/main/INSTALLATION.md).
 
-[Remplacé par la commande orchid-help] Le guide de nos outils est disponible [ici](https://github.com/wamuu-sudo/orchid/blob/main/TOOLS.md).
+[Remplacé par la commande orchid-help] Le guide de nos outils est disponible [ici](https://github.com/orchid-linux/orchid/blob/main/TOOLS.md).
 
-Un outil de migration est disponible afin de "convertir" une Gentoo existante en Orchid est disponible [ici](https://raw.githubusercontent.com/wamuu-sudo/orchid-bins/main/bins/orchid-transform). Il installe la suite complète de nos outils, et est utilisé lors de la création des stages officiels et communautaires.
+Un outil de migration est disponible afin de "convertir" une Gentoo existante en Orchid est disponible [ici](https://raw.githubusercontent.com/orchid-linux/orchid-bins/main/bins/orchid-transform). Il installe la suite complète de nos outils, et est utilisé lors de la création des stages officiels et communautaires.
 
 Caractéristiques principales d'Orchid :
 

@@ -15,7 +15,7 @@
 # REVISION: 2 juillet 2022
 #
 # LICENCE :
-# Copyright (C) 2022 Babilinx, Yannick Defais aka Chevek, Wamuu-sudo, Crystal
+# Copyright (C) 2022 Babilinx, Yannick Defais aka Chevek, orchid-linux, Crystal
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
 # Foundation, either version 3 of the License, or (at your option) any later
@@ -251,22 +251,22 @@ lang-selection() {
 	echo ""
 	read -p "Selectionnez votre langue et pressez ${COLOR_WHITE}[Entrée]${COLOR_RESET}/ Select your language and hit ${COLOR_WHITE}[Enter]${COLOR_RESET} : " language
 	if [ "$language" = "1" ]; then
-		wget "https://raw.githubusercontent.com/wamuu-sudo/orchid/main/install/locale/fr.sh" -q -O locale/install/fr.sh
+		wget "https://raw.githubusercontent.com/orchid-linux/orchid/main/install/locale/fr.sh" -q -O locale/install/fr.sh
 		source locale/install/fr.sh
 		loadkeys fr
 		clear_under_menu
 	elif [ "$language" = "2" ]; then
-		wget "https://raw.githubusercontent.com/wamuu-sudo/orchid/main/install/locale/en.sh" -q -O locale/install/en.sh
+		wget "https://raw.githubusercontent.com/orchid-linux/orchid/main/install/locale/en.sh" -q -O locale/install/en.sh
 		source locale/install/en.sh
 		loadkeys us
 		clear_under_menu
 	elif [ "$language" = "3" ]; then
-		wget "https://raw.githubusercontent.com/wamuu-sudo/orchid/main/install/locale/ro.sh" -q -O locale/install/ro.sh
+		wget "https://raw.githubusercontent.com/orchid-linux/orchid/main/install/locale/ro.sh" -q -O locale/install/ro.sh
 		source locale/install/ro.sh
 		loadkeys ro
 		clear_under_menu
 	elif [ "$language" = "4" ]; then
-		wget "https://raw.githubusercontent.com/wamuu-sudo/orchid/main/install/locale/de.sh" -q -O locale/install/de.sh
+		wget "https://raw.githubusercontent.com/orchid-linux/orchid/main/install/locale/de.sh" -q -O locale/install/de.sh
 		source locale/install/de.sh
 		loadkeys de
 		clear_under_menu
@@ -1388,7 +1388,7 @@ mount --rbind /dev /mnt/orchid/dev
 mount --rbind /sys /mnt/orchid/sys
 mount --bind /run /mnt/orchid/run
 # Téléchargement et extraction des scripts d'install pour le chroot
-wget "https://raw.githubusercontent.com/wamuu-sudo/orchid/main/install/chroot-ops/install-chroot.tar.xz" --output-document=install-chroot.tar.xz
+wget "https://raw.githubusercontent.com/orchid-linux/orchid/main/install/chroot-ops/install-chroot.tar.xz" --output-document=install-chroot.tar.xz
 tar -xvf "install-chroot.tar.xz" -C /mnt/orchid
 # On rend les scripts exécutables
 chmod +x /mnt/orchid/postinstall-in-chroot.sh && chmod +x /mnt/orchid/DWM-config.sh && chmod +x /mnt/orchid/GNOME-config.sh && chmod +x /mnt/orchid/XFCE-config.sh && chmod +x /mnt/orchid/MATE-config.sh

@@ -37,7 +37,7 @@ Storage: 20GB or more
 First download the script
 
 ```
-wget https://raw.githubusercontent.com/wamuu-sudo/orchid/main/install/install-en.sh
+wget https://raw.githubusercontent.com/orchid-linux/orchid/main/install/install-en.sh
 ```
 
 Give execution rights to the script :
@@ -381,7 +381,7 @@ DWM shortcuts:
 
 ## Go further
 
-Discover our useful tools: [Our tools](https://github.com/wamuu-sudo/orchid/blob/main/TOOLS-EN.md).
+Discover our useful tools: [Our tools](https://github.com/orchid-linux/orchid/blob/main/TOOLS-EN.md).
 
 Join our discord server: [Join the server](https://discord.gg/DeRhvP7M).
 
