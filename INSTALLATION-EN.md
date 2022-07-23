@@ -37,20 +37,20 @@ Storage: 20GB or more
 First download the script
 
 ```
-wget https://raw.githubusercontent.com/orchid-linux/orchid/main/install/install-en.sh
+wget https://raw.githubusercontent.com/orchid-linux/orchid/main/install/install.sh
 ```
 
 Give execution rights to the script :
 
 ```
-chmod +x ./install-en.sh
+chmod +x ./install.sh
 ```
 
 puis lancer le script interactif avec les droits root (avec `sudo` ou en root via `su root` après avoir mis un mot de passe à root) :
 Run the interactive script with root privileges (either using `sudo` or `su root`) :
 
 ```
-./install-en.sh
+./install.sh
 ```
 
 

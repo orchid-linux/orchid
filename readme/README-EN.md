@@ -28,7 +28,7 @@ Gaming editions come bundled with 32bits libs, vulkan support, wine, and much mo
 
 We also offer the installation of the [TkG](https://github.com/Frogging-Family/linux-tkg) kernel through our tools.
 
-An installation guide is availible [here](https://github.com/juliiine/orchid/blob/main/INSTALLATION-EN.md).
+An installation guide is availible [here](https://github.com/wamuu-sudo/orchid/blob/main/INSTALLATION-EN.md).
 
 A documentation page about our tools is availible [here](https://github.com/orchid-linux/orchid/blob/main/TOOLS-EN.md).
 
