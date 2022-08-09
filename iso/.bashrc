@@ -93,7 +93,8 @@ dev_mode()
 {
 	reset
 	echo "Welcome to the DEV mode."
-	JSON_BRANCHES=$(curl https://api.github.com/repos/wamuu-sudo/orchid/branches)
+	JSON_BRANCHES=$(curl https://api.github.com/repos/orchid-linux/orchid/branches)
+	unset BRANCHES	# prevent multiple copies of branches if one use CTRL+C several times
 	while IFS= read -r line
 	do
 		if [[ "$line" =~ ${REGEXP_BRANCHE} ]]; then
@@ -101,7 +102,7 @@ dev_mode()
 		fi
 	done <<< "$JSON_BRANCHES"
 	select_branche_to_test
-	wget "https://raw.githubusercontent.com/wamuu-sudo/orchid/${BRANCHES[$BRANCH_TO_LOAD]}/install/install.sh" -O /root/install.sh
+	wget "https://raw.githubusercontent.com/orchid-linux/orchid/${BRANCHES[$BRANCH_TO_LOAD]}/install/install.sh" -O /root/install.sh
   chmod +x /root/install.sh
   /root/install.sh
   exit
@@ -150,7 +151,7 @@ if [ "$(tty)" == "/dev/tty1" ]; then
 
     test_connection
 
-    wget https://raw.githubusercontent.com/wamuu-sudo/orchid/main/install/install.sh -O /root/install.sh
+    wget "https://raw.githubusercontent.com/orchid-linux/orchid/main/install/install.sh" -O /root/install.sh
     chmod +x /root/install.sh
     /root/install.sh
 fi
