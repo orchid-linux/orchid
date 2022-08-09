@@ -76,7 +76,7 @@ xorriso -indev "${FILE_NAME}" -boot_image "any" "replay" -rm_r "image.squashfs" 
 
 #===== Let's clean up =====================================================
 rm -f "latest-install-amd64-minimal.txt"
-rm -f "${LASTPART_URL}"
+rm -f "${FILE_NAME}"
 umount iso/
 rm -rf iso/
 rm -rf squashfs-root/
