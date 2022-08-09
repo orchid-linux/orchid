@@ -46,8 +46,6 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-#cd "/tmp"
-#cd "/mnt/660b4c9c-926c-48f6-ac23-16ddd8d31ca5/Orchid/tmp"
 echo "${COLOR_GREEN}* Fetching datas about the latest live CD release.${COLOR_RESET}"
 wget "https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/latest-install-amd64-minimal.txt"
 LAST_MINIMAL=$(sed -n '/^[0-9]/p' "latest-install-amd64-minimal.txt")
