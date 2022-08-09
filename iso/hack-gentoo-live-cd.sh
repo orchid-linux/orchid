@@ -70,7 +70,6 @@ cp -f .bashrc squashfs-root/root/
 #===== Now we will build the new ISO ======================================
 echo "${COLOR_GREEN}* New ISO is building...${COLOR_RESET}"
 mksquashfs squashfs-root image.squashfs -b 1024k -comp xz -Xbcj x86 -e boot
-#xorriso -indev '/mnt/660b4c9c-926c-48f6-ac23-16ddd8d31ca5/Orchid/tmp/install-amd64-minimal-20220807T170536Z.iso' -boot_image "any" "replay" -rm_r 'image.squashfs' -- -map '/mnt/660b4c9c-926c-48f6-ac23-16ddd8d31ca5/Orchid/tmp/image.squashfs' '/image.squashfs' -outdev '/mnt/660b4c9c-926c-48f6-ac23-16ddd8d31ca5/Orchid/tmp/orchid-linux-2022-08-09.iso' -close on -write_type auto -stream_recording data -commit
 CURRENT_DATE=$(date -Iseconds)
 CURRENT_DATE=${CURRENT_DATE//-}
 CURRENT_DATE=${CURRENT_DATE//:}
