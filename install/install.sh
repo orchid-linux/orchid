@@ -517,7 +517,7 @@ select_orchid_version_to_install()
 # Choice has been made by the user, now we need to populate no_archive
 	for (( i = 0; i < $(( ${#ORCHID_VERSION[@]}+1 )); i++ )); do
 		if [[ "${CHOICES_ORCHID[$i]}" == "${COLOR_GREEN}*${COLOR_RESET}" ]]; then
-			if [[ "$i" == "$(( ${#ORCHID_VERSION[@]}+1 ))" ]]; then
+			if [[ "$i" == "${#ORCHID_VERSION[@]}" ]]; then
 				# We switch to Graines
 				unset ORCHID_VERSION
 				unset ORCHID_URL
