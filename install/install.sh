@@ -491,11 +491,16 @@ CLI_orchid_selector()
 select_orchid_version_to_install()
 {
 	clear_under_menu
+	if [ -z "$GRAINES" ]; then
+		ORCHID_VERSION_COUNTER=$(( ${#ORCHID_VERSION[@]}+1 ))
+	else
+		ORCHID_VERSION_COUNTER=${#ORCHID_VERSION[@]}
+	fi
 	while CLI_orchid_selector && read -rp "$STR_CLI_ORCHID_VER_SEL_TEXT" NUM && [[ "$NUM" ]]; do
 		clear_under_menu
-		if [[ "$NUM" == *[[:digit:]]* && $NUM -ge 1 && $NUM -le $(( ${#ORCHID_VERSION[@]}+1 )) ]]; then
+		if [[ "$NUM" == *[[:digit:]]* && $NUM -ge 1 && $NUM -le $ORCHID_VERSION_COUNTER ]]; then
 			((NUM--))
-			for (( i = 0; i < ${#ORCHID_VERSION[@]}; i++ )); do
+			for (( i = 0; i < $ORCHID_VERSION_COUNTER; i++ )); do
 				if [[ $NUM -eq $i ]]; then
 					CHOICES_ORCHID[$i]="${COLOR_GREEN}*${COLOR_RESET}"
 				else
