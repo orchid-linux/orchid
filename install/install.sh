@@ -191,6 +191,8 @@ VALID_HOSTNAME_REGEX="^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])(\
 # No more characters past this pattern ($).
 VALID_USERNAME_REGEX="^[a-z_]([a-z0-9_-]{0,31}|[a-z0-9_-]{0,30}\\$)$"
 
+REG_ONLY_NUMBERS="^[0-9]+$"
+
 # Colors and text formating for the upper part of the installer
 BG_BLUE="$(tput setab 4)"
 BG_BLACK="$(tput setab 0)"
@@ -478,7 +480,10 @@ CLI_orchid_selector()
 			echo "(${CHOICES_ORCHID[$i]:- }) ${COLOR_WHITE}$(($i+1))${COLOR_RESET}) ${ORCHID_VERSION[$i]}"
 		fi
 	done
-
+	# GRAINES (nightly builds)
+	if [ -z "$GRAINES" ]; then
+		echo "(${CHOICES_ORCHID[$i]:- }) Expérimental : ${COLOR_RED}$(($i+1))${COLOR_RESET}) Graines (${COLOR_RED}hic sunt dracones${COLOR_RESET})"	# Here be dragons!
+	fi
 	echo "$ERROR_IN_ORCHID_SELECTOR"
 }
 
@@ -488,7 +493,7 @@ select_orchid_version_to_install()
 	clear_under_menu
 	while CLI_orchid_selector && read -rp "$STR_CLI_ORCHID_VER_SEL_TEXT" NUM && [[ "$NUM" ]]; do
 		clear_under_menu
-		if [[ "$NUM" == *[[:digit:]]* && $NUM -ge 1 && $NUM -le ${#ORCHID_VERSION[@]} ]]; then
+		if [[ "$NUM" == *[[:digit:]]* && $NUM -ge 1 && $NUM -le $(( ${#ORCHID_VERSION[@]}+1 )) ]]; then
 			((NUM--))
 			for (( i = 0; i < ${#ORCHID_VERSION[@]}; i++ )); do
 				if [[ $NUM -eq $i ]]; then
@@ -505,9 +510,48 @@ select_orchid_version_to_install()
 	done
 
 # Choice has been made by the user, now we need to populate no_archive
-	for (( i = 0; i < ${#ORCHID_VERSION[@]}; i++ )); do
+	for (( i = 0; i < $(( ${#ORCHID_VERSION[@]}+1 )); i++ )); do
 		if [[ "${CHOICES_ORCHID[$i]}" == "${COLOR_GREEN}*${COLOR_RESET}" ]]; then
-			no_archive=$i
+			if [[ "$i" == "$(( ${#ORCHID_VERSION[@]}+1 ))" ]]; then
+				# We switch to Graines
+				unset ORCHID_VERSION
+				unset ORCHID_URL
+				unset COUNTED_BY_TREE
+				unset ORCHID_ESYNC_SUPPORT
+				unset ORCHID_LOGIN
+				unset ORCHID_NAME
+				# FORMAT: orchid-graine-<init>-<date>-<edition>.tar.bz2
+				GRAINES="`wget -qO- http://meta.orchid-linux.org/versions.txt`"
+				j=0
+				while IFS= read -r line
+				do
+ 					ORCHID_VERSION+=("$line")
+					ORCHID_URL+=("http://meta.orchid-linux.org/${ORCHID_VERSION[$j]}")
+					COUNTED_BY_TREE+=(100)
+					ORCHID_ESYNC_SUPPORT+=("ask")
+					TMP=${ORCHID_VERSION[$j]#'orchid-graine-'}
+					TMP=${TMP%%.*}
+					echo "${TMP}"
+					echo "${TMP%%-*}"
+					echo "${TMP##*-}"
+					if [[ "${TMP%%-*}" == "openrc" && "${TMP##*-}" == "base" ]]; then
+						ORCHID_LOGIN+=("BASE")
+						ORCHID_NAME+=("BASE-X11")
+					elif [[ "${TMP%%-*}" == "openrc" && "${TMP##*-}" =~ $REG_ONLY_NUMBERS ]]; then
+						ORCHID_LOGIN+=("BASE")
+						ORCHID_NAME+=("BASE-X11")
+					elif [[ "${TMP%%-*}" == "openrc" && "${TMP##*-}" == "dwm" ]]; then
+						ORCHID_LOGIN+=("STANDARD")
+						ORCHID_NAME+=("DWM")
+					fi
+					j=$(( $j+1 ))
+				done < <(printf '%s\n' "$GRAINES")
+
+				select_orchid_version_to_install
+			else
+				# regular distribution
+				no_archive=$i
+			fi
 		fi
 	done
 }
@@ -1076,6 +1120,7 @@ INSTALLER_STEPS="$STR_INSTALLER_STEPS"
 	2)
 
 	# Choix du système
+	unset GRAINES
 	select_orchid_version_to_install
 
 	UI_PAGE=3
