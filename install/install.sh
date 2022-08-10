@@ -534,7 +534,6 @@ select_orchid_version_to_install()
 				do
  					ORCHID_VERSION+=("$line")
 					ORCHID_URL+=("http://meta.orchid-linux.org/${ORCHID_VERSION[$j]}")
-					COUNTED_BY_TREE+=(100)
 					ORCHID_ESYNC_SUPPORT+=("ask")
 					TMP=${ORCHID_VERSION[$j]#'orchid-graine-'}
 					TMP=${TMP%%.*}
