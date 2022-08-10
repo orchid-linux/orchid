@@ -544,12 +544,15 @@ select_orchid_version_to_install()
 					if [[ "${TMP%%-*}" == "openrc" && "${TMP##*-}" == "base" ]]; then
 						ORCHID_LOGIN+=("BASE")
 						ORCHID_NAME+=("BASE-X11")
+						COUNTED_BY_TREE+=(324367)
 					elif [[ "${TMP%%-*}" == "openrc" && "${TMP##*-}" =~ $REG_ONLY_NUMBERS ]]; then
 						ORCHID_LOGIN+=("BASE")
 						ORCHID_NAME+=("BASE-X11")
+						COUNTED_BY_TREE+=(324367)
 					elif [[ "${TMP%%-*}" == "openrc" && "${TMP##*-}" == "dwm" ]]; then
 						ORCHID_LOGIN+=("STANDARD")
 						ORCHID_NAME+=("DWM")
+						COUNTED_BY_TREE+=(326411)
 					fi
 					j=$(( $j+1 ))
 				done < <(printf '%s\n' "$GRAINES")
