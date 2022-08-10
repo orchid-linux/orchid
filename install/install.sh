@@ -525,6 +525,8 @@ select_orchid_version_to_install()
 				unset ORCHID_ESYNC_SUPPORT
 				unset ORCHID_LOGIN
 				unset ORCHID_NAME
+				unset CHOICES_ORCHID
+				unset ORCHID_COUNT
 				# FORMAT: orchid-graine-<init>-<date>-<edition>.tar.bz2
 				GRAINES="`wget -qO- http://meta.orchid-linux.org/versions.txt`"
 				j=0
@@ -551,7 +553,7 @@ select_orchid_version_to_install()
 					fi
 					j=$(( $j+1 ))
 				done < <(printf '%s\n' "$GRAINES")
-
+				CHOICES_ORCHID[0]="${COLOR_GREEN}*${COLOR_RESET}"
 				select_orchid_version_to_install
 			else
 				# regular distribution
