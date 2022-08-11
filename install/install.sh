@@ -1079,7 +1079,7 @@ fi
 trap set_term_size WINCH	# We trap window changing size to adapt our interface
 tput smcup	# save the screen
 
-wget  "https://raw.githubusercontent.com/orchid-linux/orchid/main/install/img/logo-color-1024-240.fb" --output-document=logo-color-1024-240.fb
+wget  "https://raw.githubusercontent.com/orchid-linux/orchid/new-ui/install/img/logo-color-1024-240.fb" --output-document=logo-color-1024-240.fb
 
 UI_PAGE=0		# This variable point us to the current step
 
