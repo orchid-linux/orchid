@@ -352,7 +352,8 @@ draw_installer_steps()
 echo -n ${BG_GREEN}${FG_WHITE}
 clear
 
-echo_logo
+#echo_logo
+cat logo-color-1024-240.fb > /dev/fb0
 
 echo_banner
 
@@ -537,9 +538,6 @@ select_orchid_version_to_install()
 					ORCHID_ESYNC_SUPPORT+=("ask")
 					TMP=${ORCHID_VERSION[$j]#'orchid-graine-'}
 					TMP=${TMP%%.*}
-					echo "${TMP}"
-					echo "${TMP%%-*}"
-					echo "${TMP##*-}"
 					if [[ "${TMP%%-*}" == "openrc" && "${TMP##*-}" == "base" ]]; then
 						ORCHID_LOGIN+=("BASE")
 						ORCHID_NAME+=("BASE-X11")
@@ -1080,6 +1078,8 @@ fi
 
 trap set_term_size WINCH	# We trap window changing size to adapt our interface
 tput smcup	# save the screen
+
+wget  "https://raw.githubusercontent.com/orchid-linux/orchid/main/install/img/logo-color-1024-240.fb" --output-document=logo-color-1024-240.fb
 
 UI_PAGE=0		# This variable point us to the current step
 
