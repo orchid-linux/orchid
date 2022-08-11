@@ -323,7 +323,7 @@ while IFS= read -r TEXT; do
 		((TEXT_LINE_START++))
 	done
 done <<< "${BANNER}"
-echo "${COLOR_RESET}${BG_GREEN}${COLOR_LIGHTGREY}"
+echo "${COLOR_RESET}${COLOR_LIGHTGREY}"
 }
 
 echo_logo()
@@ -349,7 +349,8 @@ _EOF_
 
 draw_installer_steps()
 {
-echo -n ${BG_GREEN}${FG_WHITE}
+#echo -n ${BG_GREEN}${FG_WHITE}
+echo -n ${FG_WHITE}
 clear
 
 #echo_logo
@@ -390,7 +391,7 @@ i=1
 TEXT_SIZE=0
 TEXT_STEPS=""
 
-echo -n ${BG_GREEN}${FG_WHITE}
+echo -n ${FG_WHITE}
 while IFS='|' read -ra STEPS; do
 	for l in "${STEPS[@]}"; do
 
@@ -406,9 +407,9 @@ while IFS='|' read -ra STEPS; do
 		TEXT_SIZE=$((${#l} + $TEXT_SIZE))
 
 		if [[ $UI_PAGE = $(($i-1)) ]]; then	# We are at this step
-			TEXT_STEPS+="${TEXT_REV}${l}${TEXT_DEFAULT}${BG_GREEN}${FG_WHITE}"
+			TEXT_STEPS+="${TEXT_REV}${l}${TEXT_DEFAULT}${FG_WHITE}"
 		elif [[ $UI_PAGE -gt $(($i-1)) ]]; then # We have already done those steps
-			TEXT_STEPS+="${TEXT_BOLD}${l}${TEXT_DEFAULT}${BG_GREEN}${FG_WHITE}"
+			TEXT_STEPS+="${TEXT_BOLD}${l}${TEXT_DEFAULT}${FG_WHITE}"
 		else	# We have not done those yet
 			TEXT_STEPS+="${l}"
 		fi
