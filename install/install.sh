@@ -356,7 +356,7 @@ clear
 #echo_logo
 cat logo-color-1024-240.fb > /dev/fb0
 
-echo_banner
+#echo_banner
 
 clear_under_menu
 
