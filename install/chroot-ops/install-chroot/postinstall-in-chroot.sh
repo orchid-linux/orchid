@@ -207,7 +207,7 @@ fi
 echo "${COLOR_GREEN}*${COLOR_RESET} Ajout des CPU_FLAGS_X86 personnalisés au make.conf."
 if test -x "$(command -v cpuid2cpuflags 2>/dev/null)"; then
 	CPUID=$(cpuid2cpuflags)
-	echo "CPU_FLAGS_X86=\"${CPUID:15})\"" >> /etc/portage/make.conf
+	echo "CPU_FLAGS_X86=\"${CPUID:15}\"" >> /etc/portage/make.conf
 else
 	echo "  ${COLOR_RED}*${COLOR_RESET} L'ajout des CPU_FLAGS_X86 personnalisés au make.conf a échoué."
 fi
