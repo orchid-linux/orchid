@@ -229,7 +229,7 @@ elif [ "$LANGUAGE" = "Romana" ]; then
 	sed -i /L10N=/d /etc/portage/make.conf
 	echo "L10N=\"ro\"" >> /etc/portage/make.conf
 	cp /etc/X11/xorg.conf.d/10-keyboard.conf /etc/X11/xorg.conf.d/10-keyboard.conf.tmp
-	sed "s/fr/us/g" /etc/X11/xorg.conf.d/10-keyboard.conf.tmp >> /etc/X11/xorg.conf.d/10-keyboard.conf
+	sed "s/fr/ro/g" /etc/X11/xorg.conf.d/10-keyboard.conf.tmp >> /etc/X11/xorg.conf.d/10-keyboard.conf
 	echo "ro_RO.UTF-8 UTF-8" >> /etc/locale.gen
 	locale-gen
 	eselect locale set "ro_RO.UTF-8"
