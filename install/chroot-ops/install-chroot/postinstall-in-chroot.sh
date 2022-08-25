@@ -247,7 +247,17 @@ elif [ "$LANGUAGE" = "German" ]; then
 	emerge -vDN @world
 	sed -i /keymap=/d /etc/conf.d/keymaps
 	echo "keymap=\"de\"" >> /etc/conf.d/keymaps
-fi#-----------------------------------------------------------------------------------
+fi
+# Remove nvidia driver if not requested by user:
+if  [[ ! $(grep "nvidia" /etc/portage/make.conf) ]]; then
+	echo "${COLOR_GREEN}*${COLOR_RESET} Suppression du pilote Nvidia inutile."
+	#emerge --update --newuse --deep --with-bdeps=y @world
+	emerge --rage-clean -q x11-drivers/nvidia-drivers
+	#emerge -q --depclean
+fi
+
+#-----------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------
 
 # Mise à jour du système
 #-----------------------------------------------------------------------------------
