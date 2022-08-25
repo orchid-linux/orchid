@@ -211,6 +211,8 @@ sed -i /LINGUAS=/d /etc/portage/make.conf
 # set langage if not french, which is default in our Gentoo's stage 4
 if [ "$LANGUAGE" = "English" ]; then
 	sed -i /L10N=/d /etc/portage/make.conf
+	cp /etc/X11/xorg.conf.d/10-keyboard.conf /etc/X11/xorg.conf.d/10-keyboard.conf.tmp
+	sed "s/fr/us/g" /etc/X11/xorg.conf.d/10-keyboard.conf.tmp >> /etc/X11/xorg.conf.d/10-keyboard.conf
 	echo "L10N=\"en\"" >> /etc/portage/make.conf
 	echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 	locale-gen
@@ -221,6 +223,8 @@ if [ "$LANGUAGE" = "English" ]; then
 elif [ "$LANGUAGE" = "Romana" ]; then
 	sed -i /L10N=/d /etc/portage/make.conf
 	echo "L10N=\"ro\"" >> /etc/portage/make.conf
+	cp /etc/X11/xorg.conf.d/10-keyboard.conf /etc/X11/xorg.conf.d/10-keyboard.conf.tmp
+	sed "s/fr/us/g" /etc/X11/xorg.conf.d/10-keyboard.conf.tmp >> /etc/X11/xorg.conf.d/10-keyboard.conf
 	echo "ro_RO.UTF-8 UTF-8" >> /etc/locale.gen
 	locale-gen
 	eselect locale set "ro_RO.UTF-8"
@@ -230,6 +234,8 @@ elif [ "$LANGUAGE" = "Romana" ]; then
 elif [ "$LANGUAGE" = "German" ]; then
 	sed -i /L10N=/d /etc/portage/make.conf
 	echo "L10N=\"de\"" >> /etc/portage/make.conf
+	cp /etc/X11/xorg.conf.d/10-keyboard.conf /etc/X11/xorg.conf.d/10-keyboard.conf.tmp
+	sed "s/fr/de/g" /etc/X11/xorg.conf.d/10-keyboard.conf.tmp >> /etc/X11/xorg.conf.d/10-keyboard.conf
 	echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
 	locale-gen
 	eselect locale set "de_DE.UTF-8"
