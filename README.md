@@ -15,12 +15,13 @@ Pour rappel, Gentoo n'est pas conseillée si vous êtes débutant sous Linux, n�
 
 Attention, même si le projet est déployable et utilisable couramment, des problèmes peuvent survenir.
 
-De nouvelles éditions sont disponibles :
+Les éditions disponibles :
 
 - DWM et DWM Gaming (Utilisation avancée).
 - Gnome, Gnome Gaming et Gnome Gaming SystemD.
-- KDE Plasma (en test).
+- KDE Plasma.
 - XFCE Gaming.
+- MATE et MATE Gaming (en test)
 - Base et Base systemD.
 
 Les éditions gaming embarquent directement l'ensemble des librairies 32bits, le support de vulkan, Wine, et bien d'autres.
@@ -41,7 +42,7 @@ Caractéristiques principales d'Orchid :
 - Tous les paquets de Gentoo sont disponibles.
 - Nous utilisons le noyau gentoo-kernel-bin, qui suit le canal stable LTS officiel de Linux. Un déblocage facilité est possible.
 - `eix` est installé par défaut.
-- Gnome, KDE Plasma, XFCE et DWM sont disponibles.
+- Gnome, KDE Plasma, XFCE, MATE etDWM sont disponibles.
 - L'environnement complet `orchid-dwm` est disponible au téléchargement, avec des customisations sympatiques et un look moderne
 - Firefox en binaire est aussi installé par défaut.
 - Nous avons fait le choix d'intégrer Flatpak par défaut pour des raisons de praticité. Il est également utilisé pour les outils Gaming dans les éditions respectives.
